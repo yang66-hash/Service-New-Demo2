@@ -1,0 +1,21 @@
+#server.port=8083
+#spring.application.name=travelservice
+#spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
+#spring.cloud.nacos.discovery.server-addr=172.16.17.37:8848
+
+server:
+  port: 8083
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  #          server-addr: 10.176.122.80:8848
+  application:
+    name: travelservice
+
+knife4j:
+  enable: false
+  setting:
+    enable-version: true
