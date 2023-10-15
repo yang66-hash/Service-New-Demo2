@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: routeservice
-  namespace: kube-test
+  namespace: kube-travel
   labels:
     app: route-service
 spec:
@@ -18,7 +18,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: routeservice
-  namespace: kube-test
+  namespace: kube-travel
   labels:
     app: route-service
 
