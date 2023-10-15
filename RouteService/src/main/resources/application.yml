@@ -13,8 +13,3 @@ spring:
         server-addr: 172.16.17.38:8848
   application:
     name: routeservice
-
-knife4j:
-  enable: false
-  setting:
-    enable-version: true

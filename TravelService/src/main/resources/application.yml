@@ -14,8 +14,3 @@ spring:
         server-addr: 172.16.17.37:8848
   application:
     name: travelservice
-
-knife4j:
-  enable: false
-  setting:
-    enable-version: true
