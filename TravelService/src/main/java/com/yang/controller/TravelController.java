@@ -30,7 +30,7 @@ public class TravelController extends MObject {
      */
     @ResponseBody
     @PostMapping("/getDetailInfo")
-//    @MRestApiType
+    @MRestApiType
     public MResponse getDetailInfo(@RequestParam("userId") String userId, @RequestHeader HttpHeaders httpHeaders){
         MResponse result = new MResponse();
 
@@ -61,7 +61,7 @@ public class TravelController extends MObject {
      */
     @ResponseBody
     @PostMapping("/getSeatDistribute")
-//    @MRestApiType
+    @MRestApiType
     public MResponse getSeatDistribute(@RequestParam(value = "flight") String flight, @RequestHeader HttpHeaders httpHeaders){
 
         MResponse result = new MResponse();
