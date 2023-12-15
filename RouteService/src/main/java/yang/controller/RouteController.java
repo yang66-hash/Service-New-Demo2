@@ -19,21 +19,19 @@ public class RouteController extends MObject {
     @Autowired
     private RestTemplate restTemplate;
 
-
-
     /**
      * @param
      * @return get the info the travel route
      *
-     * called by the interface in Travel Service and it also call the function in the travel service
+     * invoked by the interface in Travel Service and it also invoke the function in the travel service
      */
     @ResponseBody
     @PostMapping("/getRouteInfo")
     @MRestApiType
-    public MResponse getRouteInfo(@RequestParam(value = "userId") String userId, @RequestHeader HttpHeaders httpHeaders){
+    public MResponse getRouteInfo(@RequestParam(value = "userId") String userId,
+                                  @RequestHeader HttpHeaders httpHeaders){
+        System.out.println("===================");
         MResponse result = new MResponse();
-
-
         result.set("from","威海");
         result.set("to","上饶");
         result.set("flight", "MU5542");
@@ -41,14 +39,13 @@ public class RouteController extends MObject {
         MultiValueMap<String,Object> multiValueMap = new LinkedMultiValueMap<>();
         multiValueMap.add("flight","MU5542");
 
-
         HttpEntity httpEntity = new HttpEntity(multiValueMap,httpHeaders);
-        ResponseEntity<MResponse> responseResponseEntity = restTemplate.exchange(url, HttpMethod.POST,httpEntity,MResponse.class);
+        ResponseEntity<MResponse> responseResponseEntity =
+                restTemplate.exchange(url, HttpMethod.POST,httpEntity,MResponse.class);
 
         if (responseResponseEntity.getBody().get("seat")!=null){
             result.set("seat",responseResponseEntity.getBody().get("seat"));
         }
         return result;
     }
-
 }
