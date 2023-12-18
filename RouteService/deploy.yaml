@@ -3,6 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: routeservice
+  #命名空间符合正则表达式"kube-test([-a-z0-9]*[a-z0-9])?"
   namespace: kube-test-travel
   labels:
     app: route-service
