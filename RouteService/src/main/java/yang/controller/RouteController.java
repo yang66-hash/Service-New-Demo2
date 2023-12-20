@@ -27,7 +27,7 @@ public class RouteController extends MObject {
      */
     @ResponseBody
     @PostMapping("/getRouteInfo")
-    @MRestApiType
+//    @MRestApiType
     public MResponse getRouteInfo(@RequestParam(value = "userId") String userId,
                                   @RequestHeader HttpHeaders httpHeaders){
         System.out.println("===================");
