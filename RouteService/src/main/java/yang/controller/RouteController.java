@@ -27,11 +27,11 @@ public class RouteController extends MObject {
      */
     @ResponseBody
     @PostMapping("/getRouteInfo")
-//    @MRestApiType
+    @MRestApiType
     public MResponse getRouteInfo(@RequestParam(value = "userId") String userId,
                                   @RequestHeader HttpHeaders httpHeaders){
-        System.out.println("===================");
         MResponse result = new MResponse();
+        String host = "10.255.45.153:8858";
         result.set("from","威海");
         result.set("to","上饶");
         result.set("flight", "MU5542");
